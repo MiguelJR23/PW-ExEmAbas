@@ -1,6 +1,6 @@
 # PW-ExEmAbas
 
-A ideia é fazer os seguintes exercícios em abas([há um exemplo de como faze-lo em abas](url)) e então o "processar.php" mostra o resultado dependendo do que foi pedido, mas apenas de um, não de dois ou mais ao mesmo tempo:
+A ideia é fazer os seguintes exercícios em abas([use exemplo](url)) e então o "processar.php" mostra o resultado dependendo do que foi pedido, mas apenas de um, não de dois ou mais ao mesmo tempo:
 
 1) A partir de um dado valor, digitado em uma caixa de texto, apresente a tabuada respectiva.
 2) Calcular o valor com desconto de acordo com o preço e a porcentagem informada.
