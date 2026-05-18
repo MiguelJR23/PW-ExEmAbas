@@ -40,6 +40,35 @@ switch($ex) {
         }
 
     break;
+    case 4:
+
+        $a = $_POST["a"];
+        $b = $_POST["b"];
+
+        $temp = $a;
+        $a = $b;
+        $b = $temp;
+
+        echo "Novo A: $a <br>";
+        echo "Novo B: $b";
+
+    break;
+
+    case 5:
+
+        $n1 = $_POST["n1"];
+        $n2 = $_POST["n2"];
+        $n3 = $_POST["n3"];
+
+        $resultado =
+            ($n1 * $n1) +
+            ($n2 * $n2) +
+            ($n3 * $n3);
+
+        echo "Resultado: $resultado";
+
+    break;
+    
 }
 ?>
 
