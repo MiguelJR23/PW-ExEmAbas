@@ -44,7 +44,6 @@ switch($ex) {
 
         $a = $_POST["a"];
         $b = $_POST["b"];
-
         $temp = $a;
         $a = $b;
         $b = $temp;
@@ -59,7 +58,6 @@ switch($ex) {
         $n1 = $_POST["n1"];
         $n2 = $_POST["n2"];
         $n3 = $_POST["n3"];
-
         $resultado =
             ($n1 * $n1) +
             ($n2 * $n2) +
@@ -68,6 +66,44 @@ switch($ex) {
         echo "Resultado: $resultado";
 
     break;
+
+    case 6:
+
+        $salario = $_POST["salario"];
+        $gratificacao = $salario * 0.10;
+        $imposto = $salario * 0.20;
+        $liquido = $salario + $gratificacao - $imposto;
+
+        echo "Salário líquido: R$ " . number_format($liquido, 2, ",", ".");
+
+    break;
+
+    case 7:
+
+        $media = (
+            $_POST["n1"] +
+            $_POST["n2"] +
+            $_POST["n3"] +
+            $_POST["n4"]
+        ) / 4;
+
+        if($media >= 6) {
+            $situacao = "Aprovado";
+        }
+        else if($media < 3) {
+            $situacao = "Retido";
+        }
+        else {
+            $situacao = "Exame";
+        }
+
+        echo "Média: " . number_format($media, 1);
+        echo "<br>Situação: $situacao";
+
+    break;
+
+    default:
+        echo "Exercício inválido";
     
 }
 ?>
