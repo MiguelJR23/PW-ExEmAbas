@@ -110,6 +110,6 @@ switch($ex) {
 
 <br><br>
 
-<a href="index.php">
+<a href="../index.php">
     Voltar
 </a>
