@@ -13,6 +13,8 @@
 <div class="container">
     <div class="tabs" id="tabBar"></div>
     <div class="content" id="contentArea"></div>
+    <div id="secretButton"></div>
+    <img src="img/phpLogo.jpg" id="dvdLogo">
 </div>
 
 </body>

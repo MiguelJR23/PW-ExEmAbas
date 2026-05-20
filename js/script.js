@@ -130,3 +130,52 @@ function openTab(i) {
 }
 
 openTab(0);
+
+const secretButton = document.getElementById("secretButton");
+const dvdLogo = document.getElementById("dvdLogo");
+
+let posX = 100;
+let posY = 100;
+
+let velX = 3;
+let velY = 3;
+
+let animando = false;
+
+secretButton.addEventListener("click", () => {
+    animando = !animando;
+
+    if(animando) {
+        dvdLogo.style.display = "block";
+        moverDVD();
+    } else {
+        dvdLogo.style.display = "none";
+    }
+});
+
+function moverDVD() {
+
+    if(!animando) return;
+
+    const larguraTela = window.innerWidth;
+    const alturaTela = window.innerHeight;
+
+    const larguraLogo = dvdLogo.offsetWidth;
+    const alturaLogo = dvdLogo.offsetHeight;
+
+    posX += velX;
+    posY += velY;
+
+    if(posX + larguraLogo >= larguraTela || posX <= 0) {
+        velX *= -1;
+    }
+
+    if(posY + alturaLogo >= alturaTela || posY <= 0) {
+        velY *= -1;
+    }
+
+    dvdLogo.style.left = posX + "px";
+    dvdLogo.style.top = posY + "px";
+
+    requestAnimationFrame(moverDVD);
+}
