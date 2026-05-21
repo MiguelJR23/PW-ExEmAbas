@@ -105,6 +105,106 @@ switch($ex) {
     default:
         echo "Exercício inválido";
     
+break;
+
+case 8:
+
+    $n1 = $_POST["n1"];
+    $n2 = $_POST["n2"];
+    $n3 = $_POST["n3"];
+
+    $maior = max($n1, $n2, $n3);
+    $menor = min($n1, $n2, $n3);
+
+    echo "Maior número: $maior <br>";
+    echo "Menor número: $menor";
+
+break;
+
+case 9:
+
+    $inicio = $_POST["inicio"];
+    $fim = $_POST["fim"];
+
+    $soma = 0;
+
+    for($i = min($inicio, $fim); $i <= max($inicio, $fim); $i++){
+
+        if($i % 2 != 0){
+            $soma += $i;
+        }
+    }
+
+    echo "Soma dos números ímpares: $soma";
+
+break;
+
+case 10:
+
+    $numero = $_POST["numero"];
+
+    if($numero % 2 == 0){
+        echo "O número $numero é PAR";
+    } else {
+        echo "O número $numero é ÍMPAR";
+    }
+
+break;
+
+case 11:
+
+    $n1 = $_POST["n1"];
+    $n2 = $_POST["n2"];
+    $op = $_POST["operador"];
+
+    switch($op){
+
+        case "+":
+            $resultado = $n1 + $n2;
+        break;
+
+        case "-":
+            $resultado = $n1 - $n2;
+        break;
+
+        case "*":
+            $resultado = $n1 * $n2;
+        break;
+
+        case "/":
+
+            if($n2 == 0){
+                echo "Não é possível dividir por zero.";
+                break 2;
+            }
+
+            $resultado = $n1 / $n2;
+
+        break;
+    }
+
+    echo "Resultado: $resultado";
+
+break;
+case 12:
+
+    $inicio = $_POST["inicio"];
+    $fim = $_POST["fim"];
+
+    $maior = max($inicio, $fim);
+    $menor = min($inicio, $fim);
+
+    echo "Ímpares em ordem decrescente:<br><br>";
+
+    for($i = $maior; $i >= $menor; $i--){
+
+        if($i % 2 != 0){
+            echo $i . "<br>";
+        }
+    }
+
+break;
+
 }
 ?>
 
