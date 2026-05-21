@@ -104,6 +104,82 @@ html: `
 }
 
 ];
+  {
+    title: "8. Maior e menor",
+    html: `
+<h2>Maior e Menor Número</h2>
+
+<form action="forms/processar.php" method="POST">
+    <input type="hidden" name="exercicio" value="8">
+    <input type="number" name="n1" placeholder="Número 1">
+    <input type="number" name="n2" placeholder="Número 2">
+    <input type="number" name="n3" placeholder="Número 3">
+    <button type="submit">Verificar</button>
+</form>
+`
+  },
+
+  {
+    title: "9. Soma dos ímpares",
+    html: `
+<h2>Soma dos Ímpares do Intervalo</h2>
+
+<form action="forms/processar.php" method="POST">
+    <input type="hidden" name="exercicio" value="9">
+    <input type="number" name="inicio" placeholder="Valor inicial">
+    <input type="number" name="fim" placeholder="Valor final">
+    <button type="submit">Calcular</button>
+</form>
+`
+  },
+
+  {
+    title: "10. Par ou ímpar",
+    html: `
+<h2>Par ou Ímpar</h2>
+
+<form action="forms/processar.php" method="POST">
+    <input type="hidden" name="exercicio" value="10">
+    <input type="number" name="numero" placeholder="Digite um número">
+    <button type="submit">Verificar</button>
+</form>
+`
+  },
+
+  {
+    title: "11. Calculadora",
+    html: `
+<h2>Calculadora</h2>
+
+<form action="forms/processar.php" method="POST">
+    <input type="hidden" name="exercicio" value="11">
+    <input type="number" step="any" name="n1" placeholder="Primeiro valor">
+    <select name="operador">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" step="any" name="n2" placeholder="Segundo valor">
+    <button type="submit">Calcular</button>
+</form>
+`
+  },
+
+  {
+    title: "12. Ímpares decrescentes",
+    html: `
+<h2>Ímpares em Ordem Decrescente</h2>
+
+<form action="forms/processar.php" method="POST">
+    <input type="hidden" name="exercicio" value="12">
+    <input type="number" name="inicio" placeholder="Primeiro número">
+    <input type="number" name="fim" placeholder="Segundo número">
+    <button type="submit">Exibir</button>
+</form>
+`
+  }
+];
 
 const tabBar = document.getElementById("tabBar");
 const contentArea = document.getElementById("contentArea");
