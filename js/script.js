@@ -101,12 +101,10 @@ html: `
     <button type="submit">Calcular</button>
 </form>
 `
-}
-
-];
-  {
-    title: "8. Maior e menor",
-    html: `
+},
+{
+  title: "8. Maior e Menor Número",
+  html: `
 <h2>Maior e Menor Número</h2>
 
 <form action="forms/processar.php" method="POST">
@@ -117,7 +115,7 @@ html: `
     <button type="submit">Verificar</button>
 </form>
 `
-  },
+},
 
   {
     title: "9. Soma dos ímpares",
@@ -212,10 +210,8 @@ const dvdLogo = document.getElementById("dvdLogo");
 
 let posX = 100;
 let posY = 100;
-
 let velX = 3;
 let velY = 3;
-
 let animando = false;
 
 secretButton.addEventListener("click", () => {
@@ -235,7 +231,6 @@ function moverDVD() {
 
     const larguraTela = window.innerWidth;
     const alturaTela = window.innerHeight;
-
     const larguraLogo = dvdLogo.offsetWidth;
     const alturaLogo = dvdLogo.offsetHeight;
 
@@ -252,6 +247,5 @@ function moverDVD() {
 
     dvdLogo.style.left = posX + "px";
     dvdLogo.style.top = posY + "px";
-
     requestAnimationFrame(moverDVD);
 }
