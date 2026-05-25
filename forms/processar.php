@@ -102,11 +102,6 @@ switch($ex) {
 
     break;
 
-    default:
-        echo "Exercício inválido";
-    
-break;
-
 case 8:
 
     $n1 = $_POST["n1"];
@@ -203,6 +198,10 @@ case 12:
         }
     }
 
+break;
+
+default:
+    echo "Exercício inválido";
 break;
 
 }
